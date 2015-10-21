@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/herpiko/src/bnpb-data/test'
+let g:netrw_dirhist_2='/Users/herpiko/src/kominfo-pki-websdk/docs/template/tmpl'
+let g:netrw_dirhist_3='/Users/herpiko/src/sttnf-iot/node_modules'
+let g:netrw_dirhist_4='/Users/herpiko/src/surelia-web-client/conf'
