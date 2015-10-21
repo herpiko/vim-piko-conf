@@ -1,5 +1,31 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/vim-multiple-cursors
+set runtimepath^=~/.vim/bundle/vim-commentary
+set runtimepath^=~/.vim/bundle/nerdtree
+set runtimepath^=~/.vim/bundle/indentLine
+set runtimepath^=~/.vim/bundle/molokai
+set runtimepath^=~/.vim/bundle/vim-monokai
+set runtimepath^=~/.vim/bundle/vim-airline
+set runtimepath^=~/.vim/colors/guardian.vim
+set runtimepath^=~/.vim/colors/wombat.vim
+set runtimepath^=~/.vim/colors/vim-colors-solarized/colors/solarized.vim
+set runtimepath^=~/.vim/colors/github.vim
+set runtimepath^=~/.vim/colors/distinguished.vim
+
+
+let g:NERDTreeDirArrows=0
+
+set pastetoggle=<F9>
+
+"### Color
+set background=dark
+colorscheme molokai
+"###colorscheme github
+"##let g:molokai_original = 1
+"let g:rehash256 = 1
+set t_Co=256
+set mouse=a
+syntax enable           " enable syntax processing
 
 "### Multiple Cursor
 let g:multi_cursor_use_default_mapping=1
@@ -7,12 +33,10 @@ let g:multi_cursor_use_default_mapping=1
 "### Backup
 set noswapfile
 
-"### Color
-syntax enable           " enable syntax processing
 
 "### Space and Tabs
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
+set tabstop=2       " number of visual spaces per TAB
+set softtabstop=2  " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 
 
@@ -43,6 +67,7 @@ set foldmethod=indent   " fold based on indent level
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules|bower_components)$'
 
 "### Backup
 set backup
@@ -53,7 +78,7 @@ set writebackup
 
 augroup configgroup
     autocmd!
-     autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre *.php,*.py,*.txt,*.hs,*.md :call <SID>StripTrailingWhitespaces()
     autocmd VimEnter * highlight clear SignColumn
     autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
@@ -109,8 +134,6 @@ augroup ForbidReplaceMode
     autocmd InsertEnter  * call s:ForbidReplace()
     autocmd InsertChange * call s:ForbidReplace()
 augroup END
-colorscheme distinguished
-set t_Co=256
 
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
@@ -118,5 +141,8 @@ set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+"set t_Co=256
 let g:airline_powerline_fonts = 1
+
+command Paste r !parcellite -c
+set clipboard=unnamedplus
