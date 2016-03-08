@@ -19,8 +19,8 @@ set pastetoggle=<F9>
 
 "### Color
 set background=dark
-colorscheme molokai
-"###colorscheme github
+"###colorscheme molokai
+colorscheme github
 "##let g:molokai_original = 1
 "let g:rehash256 = 1
 set t_Co=256
@@ -146,3 +146,20 @@ let g:airline_powerline_fonts = 1
 
 command Paste r !parcellite -c
 set clipboard=unnamedplus
+
+"map n h
+"map e j
+"map i k
+"map o l
+"map <Enter> <Insert>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+"inoremap <A-h> <C-o>h
+"inoremap <A-j> <C-o>j
+"inoremap <A-k> <C-o>k
+"inoremap <A-l> <C-o>l
+
+"### sudo!
+cmap w!! w !sudo tee > /dev/null %<CR>
