@@ -163,3 +163,6 @@ set clipboard=unnamedplus
 
 "### sudo!
 cmap w!! w !sudo tee > /dev/null %<CR>
+
+" I should have put this line of conf since the first day I fall'n love with vim. :(
+vnoremap u <nop>
