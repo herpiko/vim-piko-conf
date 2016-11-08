@@ -2,16 +2,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/vim-multiple-cursors
 set runtimepath^=~/.vim/bundle/vim-commentary
 set runtimepath^=~/.vim/bundle/nerdtree
-set runtimepath^=~/.vim/bundle/indentLine
-set runtimepath^=~/.vim/bundle/molokai
-set runtimepath^=~/.vim/bundle/vim-monokai
 set runtimepath^=~/.vim/bundle/vim-airline
-set runtimepath^=~/.vim/colors/guardian.vim
-set runtimepath^=~/.vim/colors/wombat.vim
-set runtimepath^=~/.vim/colors/vim-colors-solarized/colors/solarized.vim
-set runtimepath^=~/.vim/colors/github.vim
 set runtimepath^=~/.vim/colors/distinguished.vim
-
 
 let g:NERDTreeDirArrows=0
 
@@ -19,10 +11,7 @@ set pastetoggle=<F9>
 
 "### Color
 set background=dark
-"###colorscheme molokai
-colorscheme github
-"##let g:molokai_original = 1
-"let g:rehash256 = 1
+colorscheme distinguished
 set t_Co=256
 set mouse=a
 syntax enable           " enable syntax processing
@@ -146,20 +135,6 @@ let g:airline_powerline_fonts = 1
 
 command Paste r !parcellite -c
 set clipboard=unnamedplus
-
-"map n h
-"map e j
-"map i k
-"map o l
-"map <Enter> <Insert>
-"noremap <Up> <NOP>
-"noremap <Down> <NOP>
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
-"inoremap <A-h> <C-o>h
-"inoremap <A-j> <C-o>j
-"inoremap <A-k> <C-o>k
-"inoremap <A-l> <C-o>l
 
 "### sudo!
 cmap w!! w !sudo tee > /dev/null %<CR>
