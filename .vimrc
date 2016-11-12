@@ -144,3 +144,4 @@ cmap w!! w !sudo tee > /dev/null %<CR>
 vnoremap u <nop>
 let jshint2_save = 1
 
+set paste
