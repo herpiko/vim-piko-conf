@@ -1,6 +1,11 @@
 ### Ho oh
 
-Just my vim configuration. not worth to clone.
+My dot files. This contains vim, jshint and tmux configurations.
 
-- ``cp -vR .vim* ~/``
-- There is a tmux configuration also, ``cp .tmux.conf ~/``
+### Requirements
+
+- For JSHint : NodeJS and `jshint` module (install globally)
+
+### Install
+
+- `make install`
