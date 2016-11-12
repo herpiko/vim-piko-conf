@@ -3,6 +3,7 @@ set runtimepath^=~/.vim/bundle/vim-multiple-cursors
 set runtimepath^=~/.vim/bundle/vim-commentary
 set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/vim-airline
+set runtimepath^=~/.vim/bundle/jshint.vim
 set runtimepath^=~/.vim/colors/distinguished.vim
 
 let g:NERDTreeDirArrows=0
@@ -141,3 +142,5 @@ cmap w!! w !sudo tee > /dev/null %<CR>
 
 " I should have put this line of conf since the first day I fall'n love with vim. :(
 vnoremap u <nop>
+let jshint2_save = 1
+
