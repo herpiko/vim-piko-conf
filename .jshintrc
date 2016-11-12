@@ -1,3 +1,32 @@
 {
-  "esversion": 6
+  "node" : true,
+  "esversion": 6,
+  "camelcase": true,
+  "boss": true,
+  "curly": true,
+  "eqeqeq": true,
+  "es3": false, /* we don't support IE 6 */
+  "forin":true,
+  "eqnull": true,
+  "expr": true,
+  "immed": true,
+  "indent": 2, /* code standards, always use 2 spaces for indent */
+  "latedef": true,
+  "newcap": true,
+  "noempty": true,
+  "nonew": true,
+  "plusplus": false,
+  "noarg": true,
+  "onevar": true,
+  "quotmark": "single",
+  "smarttabs": true,
+  "undef": true,
+  "unused": "vars",
+  "strict": true,
+  "trailing": true,
+  "jquery": true,
+  "browser": true,
+  "white" : true,
+  "asi" : true,
+  "predef" : [ "describe", "it", "beforeEach", "afterEach" ]
 }
