@@ -3,11 +3,10 @@ set runtimepath^=~/.vim/bundle/vim-multiple-cursors
 set runtimepath^=~/.vim/bundle/vim-commentary
 set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/vim-airline
-set runtimepath^=~/.vim/bundle/jshint.vim
 set runtimepath^=~/.vim/colors/distinguished.vim
+"set runtimepath^=~/.vim/bundle/jshint.vim
 
 let g:NERDTreeDirArrows=0
-
 set pastetoggle=<F9>
 
 "### Color
@@ -22,13 +21,6 @@ let g:multi_cursor_use_default_mapping=1
 
 "### Backup
 set noswapfile
-
-
-"### Space and Tabs
-set tabstop=2       " number of visual spaces per TAB
-set softtabstop=2  " number of spaces in tab when editing
-set expandtab       " tabs are spaces
-
 
 "### User Interface
 set number              " show line numbers
@@ -70,24 +62,13 @@ augroup configgroup
     autocmd!
     autocmd BufWritePre *.php,*.py,*.txt,*.hs,*.md :call <SID>StripTrailingWhitespaces()
     autocmd VimEnter * highlight clear SignColumn
-    autocmd FileType java setlocal noexpandtab
     autocmd FileType java setlocal list
-    autocmd FileType java setlocal listchars=tab:+\ ,eol:-
     autocmd FileType java setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType php setlocal expandtab
     autocmd FileType php setlocal list
-    autocmd FileType php setlocal listchars=tab:+\ ,eol:-
     autocmd FileType php setlocal formatprg=par\ -w80\ -T4
-    autocmd FileType ruby setlocal tabstop=2
-    autocmd FileType ruby setlocal shiftwidth=2
-    autocmd FileType ruby setlocal softtabstop=2
     autocmd FileType ruby setlocal commentstring=#\ %s
     autocmd BufEnter *.cls setlocal filetype=java
     autocmd BufEnter *.zsh-theme setlocal filetype=zsh
-    autocmd BufEnter Makefile setlocal noexpandtab
-    autocmd BufEnter *.sh setlocal tabstop=2
-    autocmd BufEnter *.sh setlocal shiftwidth=2
-    autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 
 
@@ -145,3 +126,11 @@ vnoremap u <nop>
 let jshint2_save = 1
 
 set paste
+
+"### Space and Tabs
+set tabstop=2 
+set softtabstop=0 
+set expandtab 
+set shiftwidth=2 
+set smarttab
+
