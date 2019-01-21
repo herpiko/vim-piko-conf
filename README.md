@@ -1,11 +1,12 @@
 ### Ho oh
 
-My dot files. This contains vim, jshint and tmux configurations.
+My dot files. This contains vim, jshint, js-beautify, keynav and tmux configurations.
 
-### Requirements
+### Requirement
 
-- For JSHint : NodeJS and `jshint` module (install globally)
+- NodeJS. JSHint and js-beautify need it.
 
 ### Install
 
 - `make install`
+- Boo!
