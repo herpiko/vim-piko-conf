@@ -135,7 +135,7 @@ set shiftwidth=2
 set smarttab
 
 ".vimrc
-map <C-S-f> :call JsBeautify()<cr>
+map <C-X> :call JsBeautify()<cr>
 " or
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for json
