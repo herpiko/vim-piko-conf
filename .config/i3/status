@@ -1,0 +1,5 @@
+i3status | while :
+do
+  read line
+  echo "FREE RAM: "$(expr $(awk '/MemFree/ {print $2}' /proc/meminfo) / 1000)" MB | $line" || exit 1
+done
