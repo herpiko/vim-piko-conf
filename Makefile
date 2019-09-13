@@ -2,6 +2,7 @@ VIM = ./.vim*
 JSHINT = ./.jshint*
 TMUX = ./.tmux*
 I3 = ./.config/i3*
+ZSHRC = ./.zshrc*
 
 install:
 	@mkdir -p ${HOME}/.config
@@ -10,4 +11,5 @@ install:
 	@cp -r ${VIM} ${HOME}
 	@cp -r ${JSHINT} ${HOME}
 	@cp -r ${I3} ${HOME}/.config/
+	@cp -r ${ZSHRC} ${HOME}
 	@echo "Happy hacking!"
