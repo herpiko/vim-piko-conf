@@ -1,6 +1,6 @@
 ### Ho oh
 
-My dot files. This contains vim, jshint, js-beautify, keynav and tmux configurations.
+My dot files. This contains i3wm, zshrc, vim, jshint, js-beautify, keynav and tmux configurations.
 
 ### Requirement
 
