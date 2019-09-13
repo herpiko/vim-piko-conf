@@ -128,11 +128,21 @@ let jshint2_save = 1
 set paste
 
 "### Space and Tabs
-set tabstop=2 
-set softtabstop=0 
-set expandtab 
-set shiftwidth=2 
-set smarttab
+"set tabstop=2 
+"set softtabstop=0 
+"set expandtab 
+"set shiftwidth=2 
+"set smarttab
+autocmd FileType python set tabstop=8|set shiftwidth=2|set expandtab
+autocmd FileType make set noexpandtab
+autocmd FileType javascript set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType json set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType jsx set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType yml set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType html set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType css set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType proto set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
+autocmd FileType go set copyindent|set preserveindent|set tabstop=2|set expandtab
 
 ".vimrc
 map <C-X> :call JsBeautify()<cr>
@@ -147,3 +157,11 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+"if empty(glob('~/.vim/autoload/plug.vim'))
+"  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+"  autocmd VimEnter * PlugInstall | source $MYVIMRC
+"endif
+"
+"call plug#begin('~/.vim/plugged')
+"Plug 'thaerkh/vim-indentguides'
+"call plug#end()
