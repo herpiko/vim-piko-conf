@@ -3,6 +3,7 @@ set runtimepath^=~/.vim/bundle/vim-multiple-cursors
 set runtimepath^=~/.vim/bundle/vim-commentary
 set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/vim-airline
+set runtimepath^=~/.vim/bundle/vim-prettier
 set runtimepath^=~/.vim/colors/distinguished.vim
 "set runtimepath^=~/.vim/bundle/jshint.vim
 
@@ -144,18 +145,6 @@ autocmd FileType css set copyindent|set preserveindent|set tabstop=2|set softtab
 autocmd FileType proto set copyindent|set preserveindent|set tabstop=2|set softtabstop=0|set expandtab|set shiftwidth=2|set smarttab
 autocmd FileType go set copyindent|set preserveindent|set tabstop=2|set expandtab
 
-".vimrc
-map <C-X> :call JsBeautify()<cr>
-" or
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-" for json
-autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
-" for jsx
-autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
-" for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-" for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 "if empty(glob('~/.vim/autoload/plug.vim'))
 "  silent execute "!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
