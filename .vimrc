@@ -5,6 +5,7 @@ set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/vim-airline
 set runtimepath^=~/.vim/bundle/vim-prettier
 set runtimepath^=~/.vim/colors/distinguished.vim
+set runtimepath^=~/.vim/bundle/govim
 "set runtimepath^=~/.vim/bundle/jshint.vim
 
 let g:NERDTreeDirArrows=0
@@ -154,3 +155,13 @@ autocmd FileType go set copyindent|set preserveindent|set tabstop=2|set expandta
 "call plug#begin('~/.vim/plugged')
 "Plug 'thaerkh/vim-indentguides'
 "call plug#end()
+
+" This configurations below is needed since VIM 8.2
+" Allow yank
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
+" Allow backspace
+set backspace=indent,eol,start  " more powerful backspacing
