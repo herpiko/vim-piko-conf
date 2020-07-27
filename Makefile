@@ -12,4 +12,5 @@ install:
 	@cp -r ${JSHINT} ${HOME}
 	@cp -r ${I3} ${HOME}/.config/
 	@cp -r ${ZSHRC} ${HOME}
+	@cp -r ${TMUX} ${HOME}
 	@echo "Happy hacking!"
