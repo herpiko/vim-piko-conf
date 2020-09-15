@@ -175,3 +175,7 @@ inoremap <MiddleMouse> <Nop>
 inoremap <2-MiddleMouse> <Nop>
 inoremap <3-MiddleMouse> <Nop>
 inoremap <4-MiddleMouse> <Nop>
+
+let NERDTreeShowHidden=1
+
+let g:prettier#config#single_quote = 'true'
