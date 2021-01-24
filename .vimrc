@@ -5,7 +5,7 @@ set runtimepath^=~/.vim/bundle/nerdtree
 set runtimepath^=~/.vim/bundle/vim-airline
 set runtimepath^=~/.vim/bundle/vim-prettier
 set runtimepath^=~/.vim/colors/distinguished.vim
-set runtimepath^=~/.vim/bundle/govim
+set runtimepath^=~/.vim/bundle/vim-go
 "set runtimepath^=~/.vim/bundle/jshint.vim
 
 let g:NERDTreeDirArrows=0
@@ -179,3 +179,9 @@ inoremap <4-MiddleMouse> <Nop>
 let NERDTreeShowHidden=1
 
 let g:prettier#config#single_quote = 'true'
+
+call plug#begin()
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+call plug#end()
+
+let g:go_fmt_command = "goimports"
